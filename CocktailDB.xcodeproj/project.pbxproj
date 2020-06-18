@@ -7,23 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		57368A72249BEBDD00ADE6EE /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 57368A66249BEBDC00ADE6EE /* Roboto-Medium.ttf */; };
+		57368A7B249BED6F00ADE6EE /* FiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57368A7A249BED6F00ADE6EE /* FiltersViewController.swift */; };
+		57368A7F249BF12000ADE6EE /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 57368A7E249BF12000ADE6EE /* Roboto-Regular.ttf */; };
+		57368A87249C037100ADE6EE /* CocktailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57368A85249C037100ADE6EE /* CocktailTableViewCell.swift */; };
+		57368A88249C037100ADE6EE /* CocktailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57368A86249C037100ADE6EE /* CocktailTableViewCell.xib */; };
 		57B0DEBB249A9E22009FF80B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B0DEBA249A9E22009FF80B /* AppDelegate.swift */; };
 		57B0DEBD249A9E22009FF80B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B0DEBC249A9E22009FF80B /* SceneDelegate.swift */; };
-		57B0DEBF249A9E22009FF80B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B0DEBE249A9E22009FF80B /* ViewController.swift */; };
+		57B0DEBF249A9E22009FF80B /* DrinksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B0DEBE249A9E22009FF80B /* DrinksViewController.swift */; };
 		57B0DEC2249A9E22009FF80B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57B0DEC0249A9E22009FF80B /* Main.storyboard */; };
 		57B0DEC4249A9E22009FF80B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57B0DEC3249A9E22009FF80B /* Assets.xcassets */; };
 		57B0DEC7249A9E22009FF80B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57B0DEC5249A9E22009FF80B /* LaunchScreen.storyboard */; };
+		57B13BE6249C1C66005D4225 /* FilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B13BE4249C1C66005D4225 /* FilterTableViewCell.swift */; };
+		57B13BE7249C1C66005D4225 /* FilterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57B13BE5249C1C66005D4225 /* FilterTableViewCell.xib */; };
+		57CAE02E249C2025009BDA0E /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 57CAE02D249C2025009BDA0E /* Roboto-Bold.ttf */; };
+		57CAE031249C315B009BDA0E /* HeaderInSectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57CAE030249C315B009BDA0E /* HeaderInSectionView.xib */; };
+		57CAE033249C3192009BDA0E /* HeaderInSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CAE032249C3192009BDA0E /* HeaderInSectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		57368A66249BEBDC00ADE6EE /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		57368A7A249BED6F00ADE6EE /* FiltersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersViewController.swift; sourceTree = "<group>"; };
+		57368A7E249BF12000ADE6EE /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		57368A85249C037100ADE6EE /* CocktailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailTableViewCell.swift; sourceTree = "<group>"; };
+		57368A86249C037100ADE6EE /* CocktailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CocktailTableViewCell.xib; sourceTree = "<group>"; };
 		57B0DEB7249A9E22009FF80B /* CocktailDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocktailDB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57B0DEBA249A9E22009FF80B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57B0DEBC249A9E22009FF80B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		57B0DEBE249A9E22009FF80B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		57B0DEBE249A9E22009FF80B /* DrinksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksViewController.swift; sourceTree = "<group>"; };
 		57B0DEC1249A9E22009FF80B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		57B0DEC3249A9E22009FF80B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		57B0DEC6249A9E22009FF80B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		57B0DEC8249A9E22009FF80B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57B13BE4249C1C66005D4225 /* FilterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableViewCell.swift; sourceTree = "<group>"; };
+		57B13BE5249C1C66005D4225 /* FilterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterTableViewCell.xib; sourceTree = "<group>"; };
+		57CAE02D249C2025009BDA0E /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		57CAE030249C315B009BDA0E /* HeaderInSectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderInSectionView.xib; sourceTree = "<group>"; };
+		57CAE032249C3192009BDA0E /* HeaderInSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderInSectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +57,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		57368A60249BEB4E00ADE6EE /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				57368A79249BEC3D00ADE6EE /* Roboto */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
+		57368A79249BEC3D00ADE6EE /* Roboto */ = {
+			isa = PBXGroup;
+			children = (
+				57368A7E249BF12000ADE6EE /* Roboto-Regular.ttf */,
+				57CAE02D249C2025009BDA0E /* Roboto-Bold.ttf */,
+				57368A66249BEBDC00ADE6EE /* Roboto-Medium.ttf */,
+			);
+			path = Roboto;
+			sourceTree = "<group>";
+		};
+		57368A80249C030500ADE6EE /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				57368A85249C037100ADE6EE /* CocktailTableViewCell.swift */,
+				57368A86249C037100ADE6EE /* CocktailTableViewCell.xib */,
+				57B13BE4249C1C66005D4225 /* FilterTableViewCell.swift */,
+				57B13BE5249C1C66005D4225 /* FilterTableViewCell.xib */,
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
 		57B0DEAE249A9E21009FF80B = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +105,28 @@
 		57B0DEB9249A9E22009FF80B /* CocktailDB */ = {
 			isa = PBXGroup;
 			children = (
+				57CAE02F249C2CEB009BDA0E /* xibs */,
+				57368A80249C030500ADE6EE /* cells */,
+				57368A60249BEB4E00ADE6EE /* fonts */,
 				57B0DEBA249A9E22009FF80B /* AppDelegate.swift */,
 				57B0DEBC249A9E22009FF80B /* SceneDelegate.swift */,
-				57B0DEBE249A9E22009FF80B /* ViewController.swift */,
+				57B0DEBE249A9E22009FF80B /* DrinksViewController.swift */,
+				57368A7A249BED6F00ADE6EE /* FiltersViewController.swift */,
 				57B0DEC0249A9E22009FF80B /* Main.storyboard */,
 				57B0DEC3249A9E22009FF80B /* Assets.xcassets */,
 				57B0DEC5249A9E22009FF80B /* LaunchScreen.storyboard */,
 				57B0DEC8249A9E22009FF80B /* Info.plist */,
 			);
 			path = CocktailDB;
+			sourceTree = "<group>";
+		};
+		57CAE02F249C2CEB009BDA0E /* xibs */ = {
+			isa = PBXGroup;
+			children = (
+				57CAE030249C315B009BDA0E /* HeaderInSectionView.xib */,
+				57CAE032249C3192009BDA0E /* HeaderInSectionView.swift */,
+			);
+			path = xibs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,8 +188,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				57B0DEC7249A9E22009FF80B /* LaunchScreen.storyboard in Resources */,
+				57B13BE7249C1C66005D4225 /* FilterTableViewCell.xib in Resources */,
+				57368A88249C037100ADE6EE /* CocktailTableViewCell.xib in Resources */,
+				57CAE031249C315B009BDA0E /* HeaderInSectionView.xib in Resources */,
 				57B0DEC4249A9E22009FF80B /* Assets.xcassets in Resources */,
+				57368A7F249BF12000ADE6EE /* Roboto-Regular.ttf in Resources */,
 				57B0DEC2249A9E22009FF80B /* Main.storyboard in Resources */,
+				57CAE02E249C2025009BDA0E /* Roboto-Bold.ttf in Resources */,
+				57368A72249BEBDD00ADE6EE /* Roboto-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,8 +206,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57B0DEBF249A9E22009FF80B /* ViewController.swift in Sources */,
+				57CAE033249C3192009BDA0E /* HeaderInSectionView.swift in Sources */,
+				57368A87249C037100ADE6EE /* CocktailTableViewCell.swift in Sources */,
+				57B0DEBF249A9E22009FF80B /* DrinksViewController.swift in Sources */,
 				57B0DEBB249A9E22009FF80B /* AppDelegate.swift in Sources */,
+				57B13BE6249C1C66005D4225 /* FilterTableViewCell.swift in Sources */,
+				57368A7B249BED6F00ADE6EE /* FiltersViewController.swift in Sources */,
 				57B0DEBD249A9E22009FF80B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

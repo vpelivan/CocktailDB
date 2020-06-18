@@ -6,21 +6,170 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </array>
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Drinks View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CocktailDB" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="DrinksViewController" customModule="CocktailDB" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="MZd-4g-H3x">
+                                <rect key="frame" x="0.0" y="114" width="414" height="782"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rui-7N-xcr">
+                                <rect key="frame" x="0.0" y="44" width="414" height="70"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drinks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PLR-hY-T93">
+                                        <rect key="frame" x="30" y="21" width="69" height="28"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dhh-rh-5k8">
+                                        <rect key="frame" x="365.5" y="20.5" width="28" height="29"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="29" id="WoM-Ca-5O5"/>
+                                            <constraint firstAttribute="width" secondItem="dhh-rh-5k8" secondAttribute="height" multiplier="27.57:29" id="gCo-12-NJ2"/>
+                                        </constraints>
+                                        <state key="normal" image="filter">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="b2o-0a-Q57" kind="show" id="HIE-6a-HT2"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="PLR-hY-T93" firstAttribute="leading" secondItem="Rui-7N-xcr" secondAttribute="leading" constant="30" id="2to-uE-3Rr"/>
+                                    <constraint firstItem="dhh-rh-5k8" firstAttribute="centerY" secondItem="Rui-7N-xcr" secondAttribute="centerY" id="FJ2-Gw-KsF"/>
+                                    <constraint firstAttribute="trailing" secondItem="dhh-rh-5k8" secondAttribute="trailing" constant="20.719999999999999" id="NOJ-0v-OFC"/>
+                                    <constraint firstAttribute="height" constant="70" id="O9l-xf-3X5"/>
+                                    <constraint firstItem="dhh-rh-5k8" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="PLR-hY-T93" secondAttribute="trailing" constant="10" id="RqR-tV-K3a"/>
+                                    <constraint firstItem="PLR-hY-T93" firstAttribute="top" secondItem="Rui-7N-xcr" secondAttribute="top" constant="21" id="nIO-HE-W9R"/>
+                                    <constraint firstAttribute="bottom" secondItem="PLR-hY-T93" secondAttribute="bottom" constant="21" id="qZk-2d-Vz6"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="MZd-4g-H3x" secondAttribute="bottom" id="7yK-lq-t6Z"/>
+                            <constraint firstItem="Rui-7N-xcr" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="8QK-le-LUC"/>
+                            <constraint firstItem="Rui-7N-xcr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="CnY-IV-RGr"/>
+                            <constraint firstItem="MZd-4g-H3x" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="dMa-LK-TZX"/>
+                            <constraint firstItem="MZd-4g-H3x" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mGA-Up-kwG"/>
+                            <constraint firstItem="MZd-4g-H3x" firstAttribute="top" secondItem="Rui-7N-xcr" secondAttribute="bottom" id="qca-MP-cRA"/>
+                            <constraint firstItem="Rui-7N-xcr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="tRo-Fh-Dqi"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Mx7-Nc-HLg"/>
+                    <connections>
+                        <outlet property="tableView" destination="MZd-4g-H3x" id="giH-pt-JKH"/>
+                        <outlet property="titleView" destination="Rui-7N-xcr" id="Syx-ah-Wc8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="121"/>
+            <point key="canvasLocation" x="109" y="119"/>
+        </scene>
+        <!--Filters View Controller-->
+        <scene sceneID="UYL-11-cFG">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="b2o-0a-Q57" customClass="FiltersViewController" customModule="CocktailDB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZMd-jQ-r0c">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YOY-hn-4We">
+                                <rect key="frame" x="0.0" y="114" width="414" height="782"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JMo-qA-rR9">
+                                <rect key="frame" x="0.0" y="44" width="414" height="70"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wcg-pM-VcE">
+                                        <rect key="frame" x="20" y="23" width="29" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="GXp-2t-AAf"/>
+                                            <constraint firstAttribute="width" secondItem="Wcg-pM-VcE" secondAttribute="height" multiplier="29:24.09" id="Kg9-Ac-MwP"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="back"/>
+                                        <connections>
+                                            <action selector="tapBackButton:" destination="b2o-0a-Q57" eventType="touchUpInside" id="4Jx-Ww-cdY"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tib-7h-yCp">
+                                        <rect key="frame" x="89" y="20.5" width="67.5" height="29"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="Tib-7h-yCp" firstAttribute="centerY" secondItem="Wcg-pM-VcE" secondAttribute="centerY" id="D4T-aM-Y28"/>
+                                    <constraint firstItem="Tib-7h-yCp" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Wcg-pM-VcE" secondAttribute="trailing" constant="40" id="I8h-Gt-sIx"/>
+                                    <constraint firstItem="Tib-7h-yCp" firstAttribute="centerY" secondItem="JMo-qA-rR9" secondAttribute="centerY" id="IB8-XS-GbB"/>
+                                    <constraint firstAttribute="height" constant="70" id="ISL-nK-ZGK"/>
+                                    <constraint firstItem="Tib-7h-yCp" firstAttribute="leading" secondItem="JMo-qA-rR9" secondAttribute="leading" constant="89" id="MWA-FE-kFl"/>
+                                    <constraint firstItem="Wcg-pM-VcE" firstAttribute="leading" secondItem="JMo-qA-rR9" secondAttribute="leading" constant="20" id="gn4-zf-cOn"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Tib-7h-yCp" secondAttribute="trailing" constant="10" id="hcr-QV-QRo"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rxx-s3-sBh">
+                                <rect key="frame" x="27" y="733" width="360" height="53"/>
+                                <color key="backgroundColor" red="0.15294117647058825" green="0.15294117647058825" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="e2G-r4-ok7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="16"/>
+                                <state key="normal" title="APPLY">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="JMo-qA-rR9" firstAttribute="trailing" secondItem="pKv-F5-A4m" secondAttribute="trailing" id="ALe-bC-gm4"/>
+                            <constraint firstItem="JMo-qA-rR9" firstAttribute="top" secondItem="pKv-F5-A4m" secondAttribute="top" id="FVB-Gp-NNO"/>
+                            <constraint firstItem="pKv-F5-A4m" firstAttribute="trailing" secondItem="Rxx-s3-sBh" secondAttribute="trailing" constant="27" id="KP7-Os-SkS"/>
+                            <constraint firstAttribute="bottom" secondItem="Rxx-s3-sBh" secondAttribute="bottom" constant="110" id="MHR-iG-Jl1"/>
+                            <constraint firstItem="YOY-hn-4We" firstAttribute="leading" secondItem="pKv-F5-A4m" secondAttribute="leading" id="Vje-HW-Eeg"/>
+                            <constraint firstItem="YOY-hn-4We" firstAttribute="top" secondItem="JMo-qA-rR9" secondAttribute="bottom" id="ar0-pR-bQr"/>
+                            <constraint firstItem="JMo-qA-rR9" firstAttribute="leading" secondItem="pKv-F5-A4m" secondAttribute="leading" id="h5g-4r-GcX"/>
+                            <constraint firstItem="YOY-hn-4We" firstAttribute="trailing" secondItem="pKv-F5-A4m" secondAttribute="trailing" id="t4g-U9-iEt"/>
+                            <constraint firstAttribute="bottom" secondItem="YOY-hn-4We" secondAttribute="bottom" id="vea-dg-Xsd"/>
+                            <constraint firstItem="Rxx-s3-sBh" firstAttribute="leading" secondItem="pKv-F5-A4m" secondAttribute="leading" constant="27" id="y5A-gV-fJs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pKv-F5-A4m"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="oDX-ap-0Zy"/>
+                    <connections>
+                        <outlet property="tableView" destination="YOY-hn-4We" id="M1X-nE-EZV"/>
+                        <outlet property="titleView" destination="JMo-qA-rR9" id="Rie-DV-6dR"/>
+                        <segue destination="fei-d9-xLq" kind="unwind" identifier="goToDrinksViewController" unwindAction="unwindToDrinksViewController:" id="zM9-Wt-0Lh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TWH-k1-jgY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="fei-d9-xLq" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="895.6521739130435" y="118.52678571428571"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="back" width="45.5" height="39"/>
+        <image name="filter" width="45.5" height="45.5"/>
+    </resources>
 </document>
