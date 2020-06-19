@@ -33,7 +33,7 @@ class DrinksViewController: UIViewController {
     }
     
     @IBAction func unwindToDrinksViewController(_ unwindSegue: UIStoryboardSegue) {
-//        let sourceViewController = unwindSegue.source
+        // let sourceViewController = unwindSegue.source
         // Use data from the view controller which initiated the unwind segue
     }
 
@@ -65,17 +65,7 @@ extension DrinksViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-
-        let myLabel = UILabel()
-        myLabel.frame = CGRect(x: 20, y: 0, width: 200, height: 16)
-        myLabel.font = UIFont(name: "Roboto-Regular", size: 14.0)
-        myLabel.textColor = #colorLiteral(red: 0.4941176471, green: 0.4941176471, blue: 0.4941176471, alpha: 1)
-        myLabel.text = self.tableView(tableView, titleForHeaderInSection: section)
-        let headerView = UIView()
-        headerView.frame = CGRect(x: 0, y: 0, width: 414, height: 40)
-        myLabel.center = headerView.center
-        headerView.addSubview(myLabel)
-        
+        let headerView = HeaderInSectionView()
         return headerView
     }
 }

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		572CBDCE249CFB9500CB9A12 /* DrinksViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 572CBDCD249CFB9500CB9A12 /* DrinksViewController.xib */; };
+		572CBDD3249D031F00CB9A12 /* FiltersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 572CBDD2249D031F00CB9A12 /* FiltersViewController.xib */; };
+		572CBDD7249D053100CB9A12 /* Cocktails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572CBDD6249D053100CB9A12 /* Cocktails.swift */; };
+		572CBDD9249D05AF00CB9A12 /* Filters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572CBDD8249D05AF00CB9A12 /* Filters.swift */; };
+		572CBDDB249D063D00CB9A12 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572CBDDA249D063D00CB9A12 /* NetworkService.swift */; };
 		57368A72249BEBDD00ADE6EE /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 57368A66249BEBDC00ADE6EE /* Roboto-Medium.ttf */; };
 		57368A7B249BED6F00ADE6EE /* FiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57368A7A249BED6F00ADE6EE /* FiltersViewController.swift */; };
 		57368A7F249BF12000ADE6EE /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 57368A7E249BF12000ADE6EE /* Roboto-Regular.ttf */; };
@@ -26,6 +31,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		572CBDCD249CFB9500CB9A12 /* DrinksViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrinksViewController.xib; sourceTree = "<group>"; };
+		572CBDD2249D031F00CB9A12 /* FiltersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FiltersViewController.xib; sourceTree = "<group>"; };
+		572CBDD6249D053100CB9A12 /* Cocktails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cocktails.swift; sourceTree = "<group>"; };
+		572CBDD8249D05AF00CB9A12 /* Filters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filters.swift; sourceTree = "<group>"; };
+		572CBDDA249D063D00CB9A12 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		57368A66249BEBDC00ADE6EE /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		57368A7A249BED6F00ADE6EE /* FiltersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersViewController.swift; sourceTree = "<group>"; };
 		57368A7E249BF12000ADE6EE /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
@@ -57,6 +67,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		572CBDCF249CFC4600CB9A12 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				57B0DEBE249A9E22009FF80B /* DrinksViewController.swift */,
+				572CBDCD249CFB9500CB9A12 /* DrinksViewController.xib */,
+				57368A7A249BED6F00ADE6EE /* FiltersViewController.swift */,
+				572CBDD2249D031F00CB9A12 /* FiltersViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		572CBDD0249D02C000CB9A12 /* ServiceLayers */ = {
+			isa = PBXGroup;
+			children = (
+				572CBDD1249D02E400CB9A12 /* NetworkService */,
+			);
+			path = ServiceLayers;
+			sourceTree = "<group>";
+		};
+		572CBDD1249D02E400CB9A12 /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				572CBDDA249D063D00CB9A12 /* NetworkService.swift */,
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		572CBDD4249D040800CB9A12 /* CocktailsModul */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CocktailsModul;
+			sourceTree = "<group>";
+		};
+		572CBDD5249D051500CB9A12 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				572CBDD6249D053100CB9A12 /* Cocktails.swift */,
+				572CBDD8249D05AF00CB9A12 /* Filters.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		57368A60249BEB4E00ADE6EE /* fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -105,13 +158,15 @@
 		57B0DEB9249A9E22009FF80B /* CocktailDB */ = {
 			isa = PBXGroup;
 			children = (
+				572CBDD4249D040800CB9A12 /* CocktailsModul */,
+				572CBDD0249D02C000CB9A12 /* ServiceLayers */,
+				572CBDD5249D051500CB9A12 /* Model */,
+				572CBDCF249CFC4600CB9A12 /* View */,
 				57CAE02F249C2CEB009BDA0E /* xibs */,
 				57368A80249C030500ADE6EE /* cells */,
 				57368A60249BEB4E00ADE6EE /* fonts */,
 				57B0DEBA249A9E22009FF80B /* AppDelegate.swift */,
 				57B0DEBC249A9E22009FF80B /* SceneDelegate.swift */,
-				57B0DEBE249A9E22009FF80B /* DrinksViewController.swift */,
-				57368A7A249BED6F00ADE6EE /* FiltersViewController.swift */,
 				57B0DEC0249A9E22009FF80B /* Main.storyboard */,
 				57B0DEC3249A9E22009FF80B /* Assets.xcassets */,
 				57B0DEC5249A9E22009FF80B /* LaunchScreen.storyboard */,
@@ -123,8 +178,8 @@
 		57CAE02F249C2CEB009BDA0E /* xibs */ = {
 			isa = PBXGroup;
 			children = (
-				57CAE030249C315B009BDA0E /* HeaderInSectionView.xib */,
 				57CAE032249C3192009BDA0E /* HeaderInSectionView.swift */,
+				57CAE030249C315B009BDA0E /* HeaderInSectionView.xib */,
 			);
 			path = xibs;
 			sourceTree = "<group>";
@@ -190,11 +245,13 @@
 				57B0DEC7249A9E22009FF80B /* LaunchScreen.storyboard in Resources */,
 				57B13BE7249C1C66005D4225 /* FilterTableViewCell.xib in Resources */,
 				57368A88249C037100ADE6EE /* CocktailTableViewCell.xib in Resources */,
+				572CBDCE249CFB9500CB9A12 /* DrinksViewController.xib in Resources */,
 				57CAE031249C315B009BDA0E /* HeaderInSectionView.xib in Resources */,
 				57B0DEC4249A9E22009FF80B /* Assets.xcassets in Resources */,
 				57368A7F249BF12000ADE6EE /* Roboto-Regular.ttf in Resources */,
 				57B0DEC2249A9E22009FF80B /* Main.storyboard in Resources */,
 				57CAE02E249C2025009BDA0E /* Roboto-Bold.ttf in Resources */,
+				572CBDD3249D031F00CB9A12 /* FiltersViewController.xib in Resources */,
 				57368A72249BEBDD00ADE6EE /* Roboto-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -206,13 +263,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				572CBDDB249D063D00CB9A12 /* NetworkService.swift in Sources */,
 				57CAE033249C3192009BDA0E /* HeaderInSectionView.swift in Sources */,
 				57368A87249C037100ADE6EE /* CocktailTableViewCell.swift in Sources */,
 				57B0DEBF249A9E22009FF80B /* DrinksViewController.swift in Sources */,
 				57B0DEBB249A9E22009FF80B /* AppDelegate.swift in Sources */,
 				57B13BE6249C1C66005D4225 /* FilterTableViewCell.swift in Sources */,
 				57368A7B249BED6F00ADE6EE /* FiltersViewController.swift in Sources */,
+				572CBDD9249D05AF00CB9A12 /* Filters.swift in Sources */,
 				57B0DEBD249A9E22009FF80B /* SceneDelegate.swift in Sources */,
+				572CBDD7249D053100CB9A12 /* Cocktails.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

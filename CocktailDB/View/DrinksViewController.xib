@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <viewController id="asG-ZU-IXl" customClass="DrinksViewController" customModule="CocktailDB" customModuleProvider="target">
+            <view key="view" contentMode="scaleToFill" id="gCY-7j-rB5">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="cXw-b7-G2e">
+                        <rect key="frame" x="0.0" y="114" width="414" height="782"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    </tableView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f8s-NC-H7C">
+                        <rect key="frame" x="0.0" y="44" width="414" height="70"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drinks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wLA-tC-uPS">
+                                <rect key="frame" x="30" y="21" width="69" height="28"/>
+                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T7V-x7-Y8f">
+                                <rect key="frame" x="365.5" y="20.5" width="28" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="T7V-x7-Y8f" secondAttribute="height" multiplier="27.57:29" id="6qu-ZK-UmN"/>
+                                    <constraint firstAttribute="height" constant="29" id="NSj-0o-L2E"/>
+                                </constraints>
+                                <state key="normal" image="filter">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="wLA-tC-uPS" firstAttribute="top" secondItem="f8s-NC-H7C" secondAttribute="top" constant="21" id="Ikb-UL-Yxj"/>
+                            <constraint firstItem="wLA-tC-uPS" firstAttribute="leading" secondItem="f8s-NC-H7C" secondAttribute="leading" constant="30" id="MwZ-Pz-Xf8"/>
+                            <constraint firstAttribute="bottom" secondItem="wLA-tC-uPS" secondAttribute="bottom" constant="21" id="N0o-Px-i0p"/>
+                            <constraint firstAttribute="height" constant="70" id="NCh-Kw-bUd"/>
+                            <constraint firstItem="T7V-x7-Y8f" firstAttribute="centerY" secondItem="f8s-NC-H7C" secondAttribute="centerY" id="NbQ-lF-iXJ"/>
+                            <constraint firstItem="T7V-x7-Y8f" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="wLA-tC-uPS" secondAttribute="trailing" constant="10" id="bpu-eF-0bN"/>
+                            <constraint firstAttribute="trailing" secondItem="T7V-x7-Y8f" secondAttribute="trailing" constant="20.719999999999999" id="x0d-ph-P1m"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                <constraints>
+                    <constraint firstItem="cXw-b7-G2e" firstAttribute="leading" secondItem="vz8-69-rh9" secondAttribute="leading" id="4fk-Iz-5pE"/>
+                    <constraint firstItem="f8s-NC-H7C" firstAttribute="top" secondItem="vz8-69-rh9" secondAttribute="top" id="AUc-xu-DFh"/>
+                    <constraint firstItem="cXw-b7-G2e" firstAttribute="top" secondItem="f8s-NC-H7C" secondAttribute="bottom" id="TEa-gb-hSN"/>
+                    <constraint firstItem="f8s-NC-H7C" firstAttribute="trailing" secondItem="vz8-69-rh9" secondAttribute="trailing" id="Wnf-zp-p1T"/>
+                    <constraint firstItem="f8s-NC-H7C" firstAttribute="leading" secondItem="vz8-69-rh9" secondAttribute="leading" id="YRL-Xy-g88"/>
+                    <constraint firstItem="cXw-b7-G2e" firstAttribute="trailing" secondItem="vz8-69-rh9" secondAttribute="trailing" id="iX0-eO-che"/>
+                    <constraint firstAttribute="bottom" secondItem="cXw-b7-G2e" secondAttribute="bottom" id="q5q-dN-Rw7"/>
+                </constraints>
+                <viewLayoutGuide key="safeArea" id="vz8-69-rh9"/>
+            </view>
+            <navigationItem key="navigationItem" id="aEE-lS-P1E"/>
+            <connections>
+                <outlet property="tableView" destination="cXw-b7-G2e" id="sUs-6j-eDG"/>
+                <outlet property="titleView" destination="f8s-NC-H7C" id="soM-Mg-N9J"/>
+            </connections>
+            <point key="canvasLocation" x="109" y="119"/>
+        </viewController>
+    </objects>
+    <resources>
+        <image name="filter" width="45.5" height="45.5"/>
+    </resources>
+</document>
