@@ -17,8 +17,10 @@ protocol DrinksViewPresenterProtocol: class {
     init(view: DrinksViewProtocol)
     func getCell(from indexPath: IndexPath, for tableView: UITableView) -> CocktailTableViewCell
     func performPagination(for indexPath: IndexPath)
+    func reloadResults()
     var cocktails: Cocktails? { get set }
     var filters: Filters? { get set }
+    var checkedFilters: [DrinkFilter]? { get set }
     var loadedCocktails: [Cocktails?]  { get set }
 }
 
@@ -31,48 +33,29 @@ class DrinksViewPresenter: DrinksViewPresenterProtocol {
     var cocktails: Cocktails?
     var loadedCocktails: [Cocktails?] = []
     var filters: Filters?
-    var totalCount = 0
+    var checkedFilters: [DrinkFilter]? = []
+    var totalCount: [Int]
+    var totalIndex = 0
     var filterIndex = 0
     
     //MARK: - Interfaces
     required init(view: DrinksViewProtocol) {
-        
         self.view = view
+        self.totalCount = Array(repeating: 0, count: 11)
         networkManager.getFilters { filters in
             self.filters = filters
-            guard let filter = filters?.drinks?.first else { return }
-            self.networkManager.getCocktails(with: filter) { cocktails in
-                self.cocktails = cocktails
-                guard let count = cocktails?.drinks?.count else { return }
-                self.totalCount += count
-                self.loadedCocktails.append(cocktails)
-                self.mapCheckedFilters()
-                print("Filters: ", self.filters ?? "no data")
-                print("Cocktails: ", self.cocktails ?? "no data")
-                self.view?.proceed()
-            }
+            self.mapFilters()
+            self.getCoctailsData()
         }
     }
     
     //MARK: - Public Methods
-    public func performPagination(for indexPath: IndexPath) {
-        guard let count = cocktails?.drinks?.count else { return }
-        if indexPath.row == count {
-            guard let filter = getNextFilter() else { return }
-            networkManager.getCocktails(with: filter) { cocktails in
-                guard let count = cocktails?.drinks?.count else { return }
-                self.cocktails = cocktails
-                self.loadedCocktails.append(cocktails)
-                self.totalCount += count
-                self.view?.proceed()
-            }
-        }
-    }
     
     public func getCell(from indexPath: IndexPath, for tableView: UITableView) -> CocktailTableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cocktailCell", for: indexPath) as! CocktailTableViewCell
-        guard let cocktailName = cocktails?.drinks?[indexPath.row].strDrink,
-            let imageStr = cocktails?.drinks?[indexPath.row].strDrinkThumb, let imageURL = URL(string: imageStr) else { return CocktailTableViewCell() }
+        
+        guard let cocktailName = loadedCocktails[indexPath.section]?.drinks?[indexPath.row].strDrink,
+            let imageStr = loadedCocktails[indexPath.section]?.drinks?[indexPath.row].strDrinkThumb, let imageURL = URL(string: imageStr) else { return CocktailTableViewCell() }
         cell.tag = indexPath.row
         cell.cocktailImageView.image = nil
         cell.activityIndicator.startAnimating()
@@ -86,6 +69,22 @@ class DrinksViewPresenter: DrinksViewPresenterProtocol {
         return cell
         
     }
+    
+    public func performPagination(for indexPath: IndexPath) {
+        print(indexPath.row, totalCount[indexPath.section] - 1)
+        if indexPath.row == totalCount[indexPath.section] - 1 {
+            getCoctailsData()
+        }
+    }
+    
+    public func reloadResults() {
+        loadedCocktails = []
+        totalCount = Array(repeating: 0, count: 11)
+        totalIndex = 0
+        checkedFilters = []
+        filterIndex = 0
+        getCoctailsData()
+    }
 
     //MARK: - Private Methods
     private func getNextFilter() -> DrinkFilter? {
@@ -96,16 +95,42 @@ class DrinksViewPresenter: DrinksViewPresenterProtocol {
             }
             filterIndex += 1
         }
-        guard let filter = filters?.drinks?[filterIndex - 1] else { return nil }
-        return filter
+        if filterIndex < drinks.count {
+            guard let filter = filters?.drinks?[filterIndex] else { return nil }
+            filterIndex += 1
+            return filter
+        }
+        return nil
+    }
+    
+    private func getCoctailsData() {
+        guard let filter = getNextFilter() else { return }
+        networkManager.getCocktails(with: filter) { cocktails in
+            guard let count = cocktails?.drinks?.count else { return }
+            self.cocktails = cocktails
+            self.loadedCocktails.append(cocktails)
+            self.totalCount[self.totalIndex] += count
+            self.totalIndex += 1
+            print(self.filters ?? "")
+            print(self.loadedCocktails)
+            self.mapCheckedFilters()
+            self.view?.proceed()
+        }
+    }
+    
+    private func mapFilters() {
+        guard let filters = self.filters?.drinks else { return }
+        for i in 0..<filters.count {
+            self.filters?.drinks?[i].isChecked = true
+        }
     }
     
     private func mapCheckedFilters() {
-        
         guard let filters = self.filters?.drinks else { return }
-        
-        for i in 0..<filters.count {
-            self.filters?.drinks?[i].isChecked = true
+        for filter in filters {
+            if filter.isChecked == true {
+                checkedFilters?.append(filter)
+            }
         }
     }
     

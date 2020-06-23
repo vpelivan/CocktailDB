@@ -26,7 +26,6 @@ class DrinksViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        print(presenter.filters ?? "")
         proceed()
     }
     
@@ -56,18 +55,13 @@ class DrinksViewController: UIViewController {
 extension DrinksViewController: UITableViewDelegate {
 
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 11
+        return presenter.loadedCocktails.count
     }
-
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Ordinary Drink"
-    }
-
 
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = HeaderInSectionView()
         print(section)
-        guard let title = presenter?.filters?.drinks?[section].strCategory else { return headerView }
+        guard let title = presenter?.checkedFilters?[section].strCategory else { return headerView }
         headerView.headerLabel.text = title
         return headerView
     }
@@ -77,14 +71,14 @@ extension DrinksViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        36
+        7
     }
 }
 
 //MARK: - TableView DataSource
 extension DrinksViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let count = presenter.cocktails?.drinks?.count else { return 0 }
+        guard let count = presenter.loadedCocktails[section]?.drinks?.count else { return 0 }
         return count
     }
     

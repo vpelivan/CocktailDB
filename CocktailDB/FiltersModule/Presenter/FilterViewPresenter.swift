@@ -38,5 +38,6 @@ class FilterViewPresenter: FilterViewPresenterProtocol {
     
     func applyChanges() {
         coctailsPresenter?.filters = filters
+        coctailsPresenter?.reloadResults()
     }
 }

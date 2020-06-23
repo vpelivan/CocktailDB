@@ -21,8 +21,11 @@
                 <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roboto Coctail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BXL-1b-qb7">
-                        <rect key="frame" x="140" y="60.5" width="105" height="19"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roboto Coctail" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BXL-1b-qb7">
+                        <rect key="frame" x="140" y="20" width="254" height="100"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="100" id="iUT-IN-EZY"/>
+                        </constraints>
                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
                         <color key="textColor" red="0.49411764705882355" green="0.49411764705882355" blue="0.49411764705882355" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -58,6 +61,7 @@
                 <constraints>
                     <constraint firstItem="BXL-1b-qb7" firstAttribute="leading" secondItem="hlB-gp-zXZ" secondAttribute="trailing" constant="20" id="8jh-4a-Ih1"/>
                     <constraint firstItem="BXL-1b-qb7" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="BRY-ro-MtI"/>
+                    <constraint firstAttribute="trailing" secondItem="BXL-1b-qb7" secondAttribute="trailing" constant="20" id="FHm-nC-zom"/>
                     <constraint firstAttribute="bottom" secondItem="hlB-gp-zXZ" secondAttribute="bottom" constant="20" id="XcD-Op-Tzk"/>
                     <constraint firstItem="hlB-gp-zXZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="gzy-nd-3Sj"/>
                     <constraint firstItem="hlB-gp-zXZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="maS-jm-MBt"/>
