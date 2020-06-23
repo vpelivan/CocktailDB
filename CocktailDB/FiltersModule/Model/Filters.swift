@@ -10,10 +10,11 @@ import Foundation
 
 // MARK: - Filters
 struct Filters: Decodable {
-    let drinks: [DrinkFilter]?
+    var drinks: [DrinkFilter]?
 }
 
 // MARK: - Drink Filter
 struct DrinkFilter: Codable {
     let strCategory: String?
+    var isChecked: Bool?
 }

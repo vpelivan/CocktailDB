@@ -13,17 +13,23 @@ class FilterTableViewCell: UITableViewCell {
     @IBOutlet weak var filterLabel: UILabel!
     @IBOutlet weak var checkmarkImageView: UIImageView!
     
-    var isChecked: Bool = true
+//    var isChecked: Bool = true
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        filterLabel.isHidden = false
+//        setupCheckmark()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
     }
+    
+//    private func setupCheckmark() {
+//        if isChecked == false {
+//            filterLabel.isHidden = true
+//        }
+//    }
     
 }

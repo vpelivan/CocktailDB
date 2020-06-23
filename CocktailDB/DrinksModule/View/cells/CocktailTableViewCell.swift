@@ -12,6 +12,7 @@ class CocktailTableViewCell: UITableViewCell {
 
     @IBOutlet weak var cocktailImageView: UIImageView!
     @IBOutlet weak var cocktailNameLabel: UILabel!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

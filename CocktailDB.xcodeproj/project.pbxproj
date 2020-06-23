@@ -17,10 +17,13 @@
 		57368A7F249BF12000ADE6EE /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 57368A7E249BF12000ADE6EE /* Roboto-Regular.ttf */; };
 		57368A87249C037100ADE6EE /* CocktailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57368A85249C037100ADE6EE /* CocktailTableViewCell.swift */; };
 		57368A88249C037100ADE6EE /* CocktailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57368A86249C037100ADE6EE /* CocktailTableViewCell.xib */; };
+		5765465424A1028500EEFA69 /* CocktailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5765465324A1028500EEFA69 /* CocktailsPresenter.swift */; };
+		5765465624A10A8300EEFA69 /* ModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5765465524A10A8300EEFA69 /* ModuleBuilder.swift */; };
+		5765465924A144FF00EEFA69 /* FilterViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5765465824A144FF00EEFA69 /* FilterViewPresenter.swift */; };
+		5785818524A1CABF0091D5C5 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5785818424A1CABF0091D5C5 /* NetworkManager.swift */; };
 		57B0DEBB249A9E22009FF80B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B0DEBA249A9E22009FF80B /* AppDelegate.swift */; };
 		57B0DEBD249A9E22009FF80B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B0DEBC249A9E22009FF80B /* SceneDelegate.swift */; };
 		57B0DEBF249A9E22009FF80B /* DrinksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B0DEBE249A9E22009FF80B /* DrinksViewController.swift */; };
-		57B0DEC2249A9E22009FF80B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57B0DEC0249A9E22009FF80B /* Main.storyboard */; };
 		57B0DEC4249A9E22009FF80B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57B0DEC3249A9E22009FF80B /* Assets.xcassets */; };
 		57B0DEC7249A9E22009FF80B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57B0DEC5249A9E22009FF80B /* LaunchScreen.storyboard */; };
 		57B13BE6249C1C66005D4225 /* FilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B13BE4249C1C66005D4225 /* FilterTableViewCell.swift */; };
@@ -41,11 +44,14 @@
 		57368A7E249BF12000ADE6EE /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		57368A85249C037100ADE6EE /* CocktailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailTableViewCell.swift; sourceTree = "<group>"; };
 		57368A86249C037100ADE6EE /* CocktailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CocktailTableViewCell.xib; sourceTree = "<group>"; };
+		5765465324A1028500EEFA69 /* CocktailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailsPresenter.swift; sourceTree = "<group>"; };
+		5765465524A10A8300EEFA69 /* ModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleBuilder.swift; sourceTree = "<group>"; };
+		5765465824A144FF00EEFA69 /* FilterViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewPresenter.swift; sourceTree = "<group>"; };
+		5785818424A1CABF0091D5C5 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		57B0DEB7249A9E22009FF80B /* CocktailDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocktailDB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57B0DEBA249A9E22009FF80B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57B0DEBC249A9E22009FF80B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		57B0DEBE249A9E22009FF80B /* DrinksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksViewController.swift; sourceTree = "<group>"; };
-		57B0DEC1249A9E22009FF80B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		57B0DEC3249A9E22009FF80B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		57B0DEC6249A9E22009FF80B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		57B0DEC8249A9E22009FF80B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -67,13 +73,78 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		572CBDCF249CFC4600CB9A12 /* View */ = {
+		5712AFCE24A0FCB70078458A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				572CBDD6249D053100CB9A12 /* Cocktails.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5712AFCF24A0FCC80078458A /* View */ = {
 			isa = PBXGroup;
 			children = (
 				57B0DEBE249A9E22009FF80B /* DrinksViewController.swift */,
 				572CBDCD249CFB9500CB9A12 /* DrinksViewController.xib */,
+				57368A80249C030500ADE6EE /* cells */,
+				57CAE02F249C2CEB009BDA0E /* xibs */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5712AFD024A0FCD10078458A /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				5765465324A1028500EEFA69 /* CocktailsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		5712AFD124A0FD2F0078458A /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				57B13BE4249C1C66005D4225 /* FilterTableViewCell.swift */,
+				57B13BE5249C1C66005D4225 /* FilterTableViewCell.xib */,
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
+		5712AFD224A0FD590078458A /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				5765465824A144FF00EEFA69 /* FilterViewPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		5712AFD324A0FD760078458A /* FiltersModule */ = {
+			isa = PBXGroup;
+			children = (
+				572CBDD5249D051500CB9A12 /* Model */,
+				572CBDCF249CFC4600CB9A12 /* View */,
+				5712AFD224A0FD590078458A /* Presenter */,
+			);
+			path = FiltersModule;
+			sourceTree = "<group>";
+		};
+		5712AFD424A0FE150078458A /* Additional Files */ = {
+			isa = PBXGroup;
+			children = (
+				57B0DEBA249A9E22009FF80B /* AppDelegate.swift */,
+				57B0DEBC249A9E22009FF80B /* SceneDelegate.swift */,
+				57B0DEC3249A9E22009FF80B /* Assets.xcassets */,
+				57B0DEC5249A9E22009FF80B /* LaunchScreen.storyboard */,
+				57B0DEC8249A9E22009FF80B /* Info.plist */,
+			);
+			path = "Additional Files";
+			sourceTree = "<group>";
+		};
+		572CBDCF249CFC4600CB9A12 /* View */ = {
+			isa = PBXGroup;
+			children = (
 				57368A7A249BED6F00ADE6EE /* FiltersViewController.swift */,
 				572CBDD2249D031F00CB9A12 /* FiltersViewController.xib */,
+				5712AFD124A0FD2F0078458A /* cells */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -81,41 +152,36 @@
 		572CBDD0249D02C000CB9A12 /* ServiceLayers */ = {
 			isa = PBXGroup;
 			children = (
-				572CBDD1249D02E400CB9A12 /* NetworkService */,
+				572CBDDA249D063D00CB9A12 /* NetworkService.swift */,
+				5785818424A1CABF0091D5C5 /* NetworkManager.swift */,
 			);
 			path = ServiceLayers;
 			sourceTree = "<group>";
 		};
-		572CBDD1249D02E400CB9A12 /* NetworkService */ = {
+		572CBDD4249D040800CB9A12 /* DrinksModule */ = {
 			isa = PBXGroup;
 			children = (
-				572CBDDA249D063D00CB9A12 /* NetworkService.swift */,
+				5712AFCE24A0FCB70078458A /* Model */,
+				5712AFCF24A0FCC80078458A /* View */,
+				5712AFD024A0FCD10078458A /* Presenter */,
 			);
-			path = NetworkService;
-			sourceTree = "<group>";
-		};
-		572CBDD4249D040800CB9A12 /* CocktailsModul */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CocktailsModul;
+			path = DrinksModule;
 			sourceTree = "<group>";
 		};
 		572CBDD5249D051500CB9A12 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				572CBDD6249D053100CB9A12 /* Cocktails.swift */,
 				572CBDD8249D05AF00CB9A12 /* Filters.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		57368A60249BEB4E00ADE6EE /* fonts */ = {
+		57368A60249BEB4E00ADE6EE /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
 				57368A79249BEC3D00ADE6EE /* Roboto */,
 			);
-			path = fonts;
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		57368A79249BEC3D00ADE6EE /* Roboto */ = {
@@ -133,8 +199,6 @@
 			children = (
 				57368A85249C037100ADE6EE /* CocktailTableViewCell.swift */,
 				57368A86249C037100ADE6EE /* CocktailTableViewCell.xib */,
-				57B13BE4249C1C66005D4225 /* FilterTableViewCell.swift */,
-				57B13BE5249C1C66005D4225 /* FilterTableViewCell.xib */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -158,19 +222,12 @@
 		57B0DEB9249A9E22009FF80B /* CocktailDB */ = {
 			isa = PBXGroup;
 			children = (
-				572CBDD4249D040800CB9A12 /* CocktailsModul */,
+				5765465524A10A8300EEFA69 /* ModuleBuilder.swift */,
+				572CBDD4249D040800CB9A12 /* DrinksModule */,
+				5712AFD324A0FD760078458A /* FiltersModule */,
 				572CBDD0249D02C000CB9A12 /* ServiceLayers */,
-				572CBDD5249D051500CB9A12 /* Model */,
-				572CBDCF249CFC4600CB9A12 /* View */,
-				57CAE02F249C2CEB009BDA0E /* xibs */,
-				57368A80249C030500ADE6EE /* cells */,
-				57368A60249BEB4E00ADE6EE /* fonts */,
-				57B0DEBA249A9E22009FF80B /* AppDelegate.swift */,
-				57B0DEBC249A9E22009FF80B /* SceneDelegate.swift */,
-				57B0DEC0249A9E22009FF80B /* Main.storyboard */,
-				57B0DEC3249A9E22009FF80B /* Assets.xcassets */,
-				57B0DEC5249A9E22009FF80B /* LaunchScreen.storyboard */,
-				57B0DEC8249A9E22009FF80B /* Info.plist */,
+				5712AFD424A0FE150078458A /* Additional Files */,
+				57368A60249BEB4E00ADE6EE /* Fonts */,
 			);
 			path = CocktailDB;
 			sourceTree = "<group>";
@@ -249,7 +306,6 @@
 				57CAE031249C315B009BDA0E /* HeaderInSectionView.xib in Resources */,
 				57B0DEC4249A9E22009FF80B /* Assets.xcassets in Resources */,
 				57368A7F249BF12000ADE6EE /* Roboto-Regular.ttf in Resources */,
-				57B0DEC2249A9E22009FF80B /* Main.storyboard in Resources */,
 				57CAE02E249C2025009BDA0E /* Roboto-Bold.ttf in Resources */,
 				572CBDD3249D031F00CB9A12 /* FiltersViewController.xib in Resources */,
 				57368A72249BEBDD00ADE6EE /* Roboto-Medium.ttf in Resources */,
@@ -263,6 +319,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5765465924A144FF00EEFA69 /* FilterViewPresenter.swift in Sources */,
 				572CBDDB249D063D00CB9A12 /* NetworkService.swift in Sources */,
 				57CAE033249C3192009BDA0E /* HeaderInSectionView.swift in Sources */,
 				57368A87249C037100ADE6EE /* CocktailTableViewCell.swift in Sources */,
@@ -272,21 +329,16 @@
 				57368A7B249BED6F00ADE6EE /* FiltersViewController.swift in Sources */,
 				572CBDD9249D05AF00CB9A12 /* Filters.swift in Sources */,
 				57B0DEBD249A9E22009FF80B /* SceneDelegate.swift in Sources */,
+				5785818524A1CABF0091D5C5 /* NetworkManager.swift in Sources */,
 				572CBDD7249D053100CB9A12 /* Cocktails.swift in Sources */,
+				5765465424A1028500EEFA69 /* CocktailsPresenter.swift in Sources */,
+				5765465624A10A8300EEFA69 /* ModuleBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		57B0DEC0249A9E22009FF80B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				57B0DEC1249A9E22009FF80B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		57B0DEC5249A9E22009FF80B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -418,7 +470,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 378HZ25P52;
-				INFOPLIST_FILE = CocktailDB/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CocktailDB/Additional Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -436,7 +488,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 378HZ25P52;
-				INFOPLIST_FILE = CocktailDB/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CocktailDB/Additional Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -9,8 +9,8 @@
 import Foundation
 
 // MARK: - Cocktails
-struct Coctails: Decodable {
-    let drinks: [Drink]?
+struct Cocktails: Decodable {
+    var drinks: [Drink]?
 }
 
 // MARK: - Drink

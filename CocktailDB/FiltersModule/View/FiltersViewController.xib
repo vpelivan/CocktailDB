@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </array>
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FiltersViewController" customModule="CocktailDB" customModuleProvider="target">
+            <connections>
+                <outlet property="tableView" destination="Ege-No-DSb" id="XPT-7j-QTR"/>
+                <outlet property="titleView" destination="p2W-G7-mTU" id="X2I-db-EI1"/>
+                <outlet property="view" destination="fDS-IZ-e2d" id="DI7-IK-qcX"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="fDS-IZ-e2d">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ege-No-DSb">
+                    <rect key="frame" x="0.0" y="114" width="414" height="782"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p2W-G7-mTU">
+                    <rect key="frame" x="0.0" y="44" width="414" height="70"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P3r-bc-8ti">
+                            <rect key="frame" x="20" y="23" width="29" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="P3r-bc-8ti" secondAttribute="height" multiplier="29:24.09" id="MBg-DF-fQZ"/>
+                                <constraint firstAttribute="height" constant="24" id="qeM-hl-XLr"/>
+                            </constraints>
+                            <state key="normal" title="Button" image="back"/>
+                            <connections>
+                                <action selector="tapBackButton:" destination="-1" eventType="touchUpInside" id="wZW-EE-2K0"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mbv-zD-Rxj">
+                            <rect key="frame" x="89" y="20.5" width="67.5" height="29"/>
+                            <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="24"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="Mbv-zD-Rxj" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="P3r-bc-8ti" secondAttribute="trailing" constant="40" id="7Mr-Yb-ds6"/>
+                        <constraint firstItem="Mbv-zD-Rxj" firstAttribute="leading" secondItem="p2W-G7-mTU" secondAttribute="leading" constant="89" id="MKw-wP-5Fc"/>
+                        <constraint firstItem="Mbv-zD-Rxj" firstAttribute="centerY" secondItem="P3r-bc-8ti" secondAttribute="centerY" id="NLp-Qv-avD"/>
+                        <constraint firstAttribute="height" constant="70" id="RZA-LE-Yet"/>
+                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Mbv-zD-Rxj" secondAttribute="trailing" constant="10" id="XC9-1B-CYr"/>
+                        <constraint firstItem="P3r-bc-8ti" firstAttribute="leading" secondItem="p2W-G7-mTU" secondAttribute="leading" constant="20" id="YPP-EU-rIu"/>
+                        <constraint firstItem="Mbv-zD-Rxj" firstAttribute="centerY" secondItem="p2W-G7-mTU" secondAttribute="centerY" id="gLv-8U-gwi"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ct-MH-Bpz">
+                    <rect key="frame" x="27" y="733" width="360" height="53"/>
+                    <color key="backgroundColor" red="0.1529411765" green="0.1529411765" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="53" id="oCx-Wv-j1l"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="16"/>
+                    <state key="normal" title="APPLY">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="tapApplyButton:" destination="-1" eventType="touchUpInside" id="DNd-27-dG4"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="Ege-No-DSb" firstAttribute="trailing" secondItem="jwy-gO-UWm" secondAttribute="trailing" id="0fI-jG-jQg"/>
+                <constraint firstItem="Ege-No-DSb" firstAttribute="top" secondItem="p2W-G7-mTU" secondAttribute="bottom" id="1Es-DB-39L"/>
+                <constraint firstItem="jwy-gO-UWm" firstAttribute="trailing" secondItem="9Ct-MH-Bpz" secondAttribute="trailing" constant="27" id="6KW-Wo-NHA"/>
+                <constraint firstAttribute="bottom" secondItem="Ege-No-DSb" secondAttribute="bottom" id="9bR-xc-sVn"/>
+                <constraint firstItem="Ege-No-DSb" firstAttribute="leading" secondItem="jwy-gO-UWm" secondAttribute="leading" id="IVk-dQ-5AP"/>
+                <constraint firstAttribute="bottom" secondItem="Ege-No-DSb" secondAttribute="bottom" id="IlY-f2-mpj"/>
+                <constraint firstAttribute="bottom" secondItem="9Ct-MH-Bpz" secondAttribute="bottom" constant="110" id="Lb3-SV-gHd"/>
+                <constraint firstItem="p2W-G7-mTU" firstAttribute="top" secondItem="jwy-gO-UWm" secondAttribute="top" id="X4A-tp-CZq"/>
+                <constraint firstItem="p2W-G7-mTU" firstAttribute="leading" secondItem="jwy-gO-UWm" secondAttribute="leading" id="f3Z-hb-bHI"/>
+                <constraint firstItem="9Ct-MH-Bpz" firstAttribute="leading" secondItem="jwy-gO-UWm" secondAttribute="leading" constant="27" id="qbA-1x-GcB"/>
+                <constraint firstItem="p2W-G7-mTU" firstAttribute="trailing" secondItem="jwy-gO-UWm" secondAttribute="trailing" id="vUd-83-4cF"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="jwy-gO-UWm"/>
+            <point key="canvasLocation" x="1547" y="129"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="back" width="45.5" height="39"/>
+    </resources>
+</document>
