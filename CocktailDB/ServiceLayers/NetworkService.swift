@@ -19,8 +19,6 @@ class NetworkService: NetworkServiceProtocol {
     //MARK: - Variables
     public var imageCache = NSCache<NSString, UIImage>() //Image Cache Class
     
-    
-    
     //MARK: - Public Methods
     /* Using A Generic Argument in this method to be able to create universal function for parsing any model type with completion handler closure escaping condition */
     public func getData<T: Decodable>(into type: T.Type, from url: URL, completion: @escaping (T?) -> ()) {
@@ -77,7 +75,6 @@ class NetworkService: NetworkServiceProtocol {
     }
     
     //MARK: - Private Methods
-    
     /* This alert shows in case if the response status code is not valid for loading data */
     private func alert(withTitle title: String, message: String) {
         let ac = UIAlertController(title: title, message: message, preferredStyle: .alert)

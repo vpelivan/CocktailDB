@@ -11,10 +11,13 @@ import UIKit
 
 class NetworkManager {
     
+    //MARK: - Variables
     let networkService = NetworkService()
     let urlString = "https://www.thecocktaildb.com/api/json/v1/1/"
     
-    func getFilters(completion: @escaping (Filters?) -> ()) {
+    
+    //MARK: - Public Methods
+    public func getFilters(completion: @escaping (Filters?) -> ()) {
         
         let listParam = "list.php?c=list"
         guard let baseUrl = URL(string: urlString + listParam) else { return }
@@ -25,7 +28,7 @@ class NetworkManager {
         }
     }
     
-    func getCocktails(with filter: DrinkFilter?, completion: @escaping (Cocktails?) -> ()) {
+    public func getCocktails(with filter: DrinkFilter?, completion: @escaping (Cocktails?) -> ()) {
 
         let filterParam = "filter.php?c="
         guard let filter = filter?.strCategory?.replacingOccurrences(of: " ", with: "%20") else { return }

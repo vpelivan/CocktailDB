@@ -26,7 +26,6 @@ class DrinksViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        
         print(presenter.filters ?? "")
         proceed()
     }
@@ -51,14 +50,13 @@ class DrinksViewController: UIViewController {
         let filtersVC = ModuleBuilder.CreateFilters(filters: presenter?.filters, presenter: presenter)
         navigationController?.pushViewController(filtersVC, animated: true)
     }
-    
 }
 
 //MARK: - TableView Delegate
 extension DrinksViewController: UITableViewDelegate {
 
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 11
     }
 
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -75,20 +73,12 @@ extension DrinksViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        guard let count = presenter.cocktails?.drinks?.count else { return }
-        if indexPath.row == count - 1 {
-            presenter.performPagination()
-        }
+        presenter.performPagination(for: indexPath)
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         36
     }
-    
-    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        0
-    }
-    
 }
 
 //MARK: - TableView DataSource

@@ -17,7 +17,6 @@ protocol Builder {
 class ModuleBuilder: Builder {
     static func CreateDrinks() -> UIViewController {
         let view = DrinksViewController()
-//        let networkService = NetworkService()
         let presenter = DrinksViewPresenter(view: view)
         view.presenter = presenter
         return view

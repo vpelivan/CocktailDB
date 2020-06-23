@@ -34,6 +34,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+// MARK: This Extension allows us to call Alerts in NetworkService class in case of an error
+
 extension UIApplication {
     static func topViewController(base: UIViewController? = UIApplication.shared.delegate?.window??.rootViewController) -> UIViewController? {
         if let nav = base as? UINavigationController {
